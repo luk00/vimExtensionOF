@@ -2,8 +2,8 @@
 " vim extension for OpenFOAM cases files "
 " Language:	OpenFOAM Case Files      "
 " Maintainer:	Tobias Holzmann          "
-" Last Change:  Sept. 15, 2012           "
-" Version:	Beta 1.3                 "
+" Last Change:  March. 2013              "
+" Version:	2.2.x	                 "
 " File:		syntax			 "
 "----------------------------------------"
 "
@@ -39,7 +39,7 @@ syntax	match	ofNumbers "-\=[0-9]\+\.\=[0-9]*-\=[eE]\=-\=[0-9]*\.\=[0-9]*"
 highlight link  ofNumbers Identifier
 
 " OpenFOAM Operators and Syntax
-syntax 	match	ofOperator "+\|\*\|;\|:\|,\|<\|>\|&\||\|!\|\~\|%\|=\|)\|(\|{\|}\|\.\|\[\|\]\|\""
+syntax 	match	ofOperator "+\|\*\|:\|,\|<\|>\|&\||\|!\|\~\|%\|=\|)\|(\|\.\|\[\|\]\|\""
 highlight link 	ofOperator Operator
 
 " OpenFOAM Header
@@ -113,7 +113,7 @@ highlight link	ofDecomposePartDictType Type
 syntax	keyword	ofSetFieldsDictConst volScalarFieldValue box
 highlight link	ofSetFieldsDictConst Constant
 
-syntax	keyword ofSetFieldsDictGroup defaultFieldValues fieldValues boxToCell regions
+syntax	keyword ofSetFieldsDictGroup defaultFieldValues fieldValues boxToCell regions boundaryToFace boxToCell boxToFace boxToPoint cellToCell cellToFace cellToPoint cylinderAnnulusToCell  cylinderToCell faceToCell faceToFace  faceToPoint faceZoneToCell  faceZoneToFaceZone fieldToCell labelToCell labelToFace labelToPoint nbrToCell nearestToCell nearestToPoint normalToFace patchToFace pointToCell pointToFace pointToPoint regionToCell regionToFace rotatedBoxToCell setToCellZone setToFaceZone setToPointZone setsToFaceZone shapeToCell sphereToCell surfaceToCell surfaceToPoint targetVolumeToCell zoneToCell zoneToFace zoneToPoint
 highlight link	ofSetFieldsDictGroup Statement
 
 	" changeDictionaryDict
@@ -127,7 +127,8 @@ syntax 	keyword	ofSnappyHexMeshType file inside outside distance closedTriSurfac
 
 highlight link 	ofSnappyHexMeshType Type 
 
-syntax 	keyword ofSnappyHexMeshGroups refinementRegions refinementSurfaces maxLocalCells maxGlobalCells minRefinementCells nCellsBetweenLevels locationInMesh allowFreeStandingZoneFaces nSmoothPatch tolerance nSolveIter nRelaxIter nFeatureSnapIter expansionRatio finalLayerThickness minThickness nGrow featureAngle nRelaxIter nSmoothSurfaceNormals features resolveFeatureAngle relativeSize relativeSizes nSmoothNormals nSmoothThickness maxFaceThicknessRatio maxThicknessToMedialRatio minMedianAxisAngle nBufferCellsNoExtrude nLayerIter nRelaxedIter maxNonOrtho maxBoundarySkewness maxInternalSkewness maxConcave minVol minTetQuality minArea minTwist minDeterminant minFaceWeight minVolRatio minTriangleTwist nSmoothScale errorReduction debug mergeTolerance maxLoadUnbalance mode type min max level levels nSurfaceLayers radius POV centre name faceZone cellZone cellZoneInside
+syntax 	keyword ofSnappyHexMeshGroups refinementRegions refinementSurfaces maxLocalCells maxGlobalCells minRefinementCells nCellsBetweenLevels locationInMesh allowFreeStandingZoneFaces nSmoothPatch tolerance nSolveIter nRelaxIter nFeatureSnapIter expansionRatio finalLayerThickness minThickness nGrow featureAngle nRelaxIter nSmoothSurfaceNormals features resolveFeatureAngle relativeSize relativeSizes nSmoothNormals nSmoothThickness maxFaceThicknessRatio maxThicknessToMedialRatio minMedianAxisAngle nBufferCellsNoExtrude nLayerIter nRelaxedIter maxNonOrtho maxBoundarySkewness maxInternalSkewness maxConcave minVol minTetQuality minArea minTwist minDeterminant minFaceWeight minVolRatio minTriangleTwist nSmoothScale errorReduction debug mergeTolerance maxLoadUnbalance mode type min max level levels nSurfaceLayers radius POV centre name faceZone cellZone cellZoneInside implicitFeatureSnap explicitFeatureSnap multiRegionFeatureSnap
+
 highlight link 	ofSnappyHexMeshGroups Constant
 
 syntax	match	ofSTL "[a-zA-Z0-9]*.stl"
@@ -150,7 +151,7 @@ highlight link	ofSpecialAttribut Type
 syn	match	ofSpecialAttribut2 "^startTime\|^endTime"
 highlight link	ofSpecialAttribut2 Constant
 
-syn	keyword	ofControlDictGroups functions streamLines uniformCoeffs forceCoeffs cuttingPlane readFields 
+syn	keyword	ofControlDictGroups functions streamLines uniformCoeffs forceCoeffs cuttingPlane readFields
 highlight link  ofControlDictGroups Statement
 
 		" ---> Function Streamline
@@ -172,7 +173,7 @@ highlight link	ofFunctionForceCoeffs Boolean
 
 	" Boundary Types
 
-syn	keyword	ofDict0BoundaryType activeBaffleVelocity activePressureForceBaffleVelocity advective buoyantPressure codedFixedValue cylindricalInletVelocity directMappedField directMappedFixedInternalValue directMappedFixedPushedInternalValue directMappedFixedValue directMappedFlowRate directMappedVelocityFluxFixedValue fan fanPressure fixedFluxPressure fixedInternalValueFvPatchField fixedJump fixedNormalSlip fixedPressureCompressibleDensity flowRateInletVelocity fluxCorrectedVelocity freestream freestreamPressure inletOutlet inletOutletTotalTemperature movingWallVelocity oscillatingFixedValue outletInlet outletMappedUniformInlet partialSlip pressureDirectedInletOutletVelocity pressureDirectedInletVelocity pressureInletOutletVelocity pressureInletUniformVelocity pressureInletVelocity pressureNormalInletOutletVelocity rotatingPressureInletOutletVelocity rotatingTotalPressure rotatingWallVelocity selfContainedDirectMapped skript slip supersonicFreestream surfaceNormalFixedValue swirlFlowRateInletVelocity syringePressure timeVaryingFlowRateInletVelocity timeVaryingMappedFixedValue timeVaryingUniformFixedValue timeVaryingUniformTotalPressure totalPressure totalTemperature translatingWallVelocity turbulentInlet turbulentIntensityKineticEnergyInlet uniformDensityHydrostaticPressure uniformFixedValue waveTransmissive groovyBC zeroGradient fixedValue kqRWallFunction epsilonWallFunction omegaWallFunction nutkWallFunction turbulentMixingLengthDissipationRateInlet timeVaryingTotalPressure basicSymmetry coupled fixedGradient mixed calculated porousBafflePressure uncoupledSixDoFRigidBodyDisplacement fixedLine fixedOrientation linearSpring compressible:: 
+syn	keyword	ofDict0BoundaryType activeBaffleVelocity activePressureForceBaffleVelocity advective buoyantPressure codedFixedValue cylindricalInletVelocity directMappedField directMappedFixedInternalValue directMappedFixedPushedInternalValue directMappedFixedValue directMappedFlowRate directMappedVelocityFluxFixedValue fan fanPressure fixedFluxPressure fixedInternalValueFvPatchField fixedJump fixedNormalSlip fixedPressureCompressibleDensity flowRateInletVelocity fluxCorrectedVelocity freestream freestreamPressure inletOutlet inletOutletTotalTemperature movingWallVelocity oscillatingFixedValue outletInlet outletMappedUniformInlet partialSlip pressureDirectedInletOutletVelocity pressureDirectedInletVelocity pressureInletOutletVelocity pressureInletUniformVelocity pressureInletVelocity pressureNormalInletOutletVelocity rotatingPressureInletOutletVelocity rotatingTotalPressure rotatingWallVelocity selfContainedDirectMapped skript slip supersonicFreestream surfaceNormalFixedValue swirlFlowRateInletVelocity syringePressure timeVaryingFlowRateInletVelocity timeVaryingMappedFixedValue timeVaryingUniformFixedValue timeVaryingUniformTotalPressure totalPressure totalTemperature translatingWallVelocity turbulentInlet turbulentIntensityKineticEnergyInlet uniformDensityHydrostaticPressure uniformFixedValue waveTransmissive groovyBC zeroGradient fixedValue kqRWallFunction epsilonWallFunction omegaWallFunction nutkWallFunction turbulentMixingLengthDissipationRateInlet timeVaryingTotalPressure basicSymmetry coupled fixedGradient mixed calculated porousBafflePressure uncoupledSixDoFRigidBodyDisplacement fixedLine fixedOrientation linearSpring compressible:: turbulentHeatFluxTemperature turbulentInlet turbulentIntensityKineticEnergyInlet turbulentMixingLengthDissipationRateInlet turbulentMixingLengthFrequencyInlet uniformDensityHydrostaticPressure turbulentMixingLengthFrequencyInlet 
 highlight link  ofDict0BoundaryType Boolean 
 
 syn 	match	ofDict0BoundaryTypeCompressible "compressible::\{1}\(turbulentTemperatureCoupledBaffleMixed\|epsilonWallFunction\|kqRWallFunction\|omegaWallFunction\|temperatureThermoBaffle1D<constSolidThermoPhysics>\|temperatureThermoBaffle1D<expoSolidThermoPhysics>\|turbulentHeatFluxTemperature\|turbulentMixingLengthDissipationRateInlet\|turbulentMixingLengthFrequencyInlet\|turbulentTemperatureCoupledBaffle\|turbulentTemperatureRadCoupledMixed\)\{1}"
@@ -180,12 +181,12 @@ highlight link	ofDict0BoundaryTypeCompressible Boolean
 
 	" Boundary Variables
 
-syn	keyword ofDict0Value uniform  
+syn	keyword ofDict0Value uniform constant 
 highlight link	ofDict0Value Type
 
 	" Boundary Init Values
 
-syn	keyword ofDict0Variables value inletValue outletValue mixingLength centreOfMass momentOfInertia mass velocity orientation acceleration angularMomentum torque gravity rhoInf report relaxationFactor sixDoFRigidBodyMotionRestraint anchor refAttachmentPt stiffness damping restLength maxIterations fixedOrientationCoeffs refPoint direction sixDoFRigidBodyMotionConstraint dimensions KName neighbourFieldName intensity 
+syn	keyword ofDict0Variables value inletValue outletValue mixingLength centreOfMass momentOfInertia mass velocity orientation acceleration angularMomentum torque gravity rhoInf report relaxationFactor sixDoFRigidBodyMotionRestraint anchor refAttachmentPt stiffness damping restLength maxIterations fixedOrientationCoeffs refPoint direction sixDoFRigidBodyMotionConstraint dimensions KName neighbourFieldName intensity flowRate volumetricFlowRate 
 highlight link  ofDict0Variables Constant
 
 	" Boundary Groups

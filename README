@@ -2,12 +2,12 @@
 " vim addon for highlight OpenFOAM cases "
 " Language:     OpenFOAM Case Files      "
 " Maintainer:   Tobias Holzmann          "
-" Last Change:  April 22, 2012           "
-" Version:      Beta 1.2                 "
+" Last Change:  March 2013	         "
+" Version:      2.2.x	                 "
 " File:         Readme	                 "
 "----------------------------------------"
 
-Any questions: mailto:TobiasHolzmann@holzmann-cfd.de
+Any questions: mailto:Tobias.Holzmann@holzmann-cfd.de
 
 	Colors and Highlight
 	-> to use a other scheme change the scripts.vim file by editing the colorscheme
