@@ -74,7 +74,7 @@ highlight link	ofIncludedFiles Statement
 
         " fvSolution
 
-syntax  keyword	ofFvSolutionsConst solver preconditioner tolerance relTol maxIter smoother cacheAgglomeration nCellsInCoarsestLevel agglomerator mergeLevels smoother cacheAgglomeration nCellsInCoarsestLevel agglomerator mergeLevels momentumPredictor nCorrectors nNonOrthogonalCorrectors nAlphaCorr nAlphaSubCycles cAlpha pRefPoint pRefValue nPreSweeps nPostSweeps nSweeps rhoMin rhoMax pMin pMax transonic nFinestSweeps
+syntax  keyword	ofFvSolutionsConst solver preconditioner tolerance relTol maxIter smoother cacheAgglomeration nCellsInCoarsestLevel agglomerator mergeLevels smoother cacheAgglomeration nCellsInCoarsestLevel agglomerator mergeLevels momentumPredictor nCorrectors nNonOrthogonalCorrectors nAlphaCorr nAlphaSubCycles cAlpha pRefPoint pRefCell pRefValue nPreSweeps nPostSweeps nSweeps rhoMin rhoMax pMin pMax transonic nFinestSweeps
 highlight link  ofFVSolutionsConst Constant
 
 syntax 	keyword	ofFvSolutionsAttribut PCG DIC GAMG GaussSeidel faceAreaPair DILU PBiCG smoothSolver
@@ -123,7 +123,7 @@ highlight link	ofSetFieldsDictionaryDictGroup Statement
 
  	" snappyHexMeshDict
 
-syntax 	keyword	ofSnappyHexMeshType file inside outside distance closedTriSurfaceMesh distributedTriSurfaceMesh searchableBox searchableCylinder  searchablePlane searchablePlate searchableSphere  searchableSurfaceCollection searchableSurfaceWithGaps  triSurfaceMesh patchInfo
+syntax 	keyword	ofSnappyHexMeshType file inside outside distance closedTriSurfaceMesh distributedTriSurfaceMesh searchableBox searchableCylinder  searchablePlane searchablePlate searchableSphere  searchableSurfaceCollection searchableSurfaceWithGaps  triSurfaceMesh patchInfo point1 point2
 
 highlight link 	ofSnappyHexMeshType Type 
 
