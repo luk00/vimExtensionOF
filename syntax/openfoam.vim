@@ -61,7 +61,7 @@ syntax  match	ofSpecialVariables "$internalField"
 highlight link	ofSpecialVariables Statement
 
 " OpenFOAM variables
-syntax 	keyword	ofVariables nu nuInf nu0 n m sigma U p p_rgh k epsilon alpha1 omega nut mut mu nuTilda R rho psi gamma phi p0 T muEff h phiU alphaEff DkEff DepsilonEff DomegaEff DREff rhoFinal pFinal p_rghFinal Final K TFinal sigmaS emissivity Cp Hf kappa n0 Tref C0 K0 Pr DT phid 
+syntax 	keyword	ofVariables nu nuInf nu0 n m sigma U p p_rgh k epsilon alpha1 alpha2 alpha3 omega nut mut mu nuTilda R rho psi gamma phi p0 T muEff h phiU alphaEff DkEff DepsilonEff DomegaEff DREff rhoFinal pFinal p_rghFinal Final K TFinal sigmaS emissivity Cp Hf kappa n0 Tref C0 K0 Pr DT phid 
 highlight link  ofVariables Special                                                                                 
 
 " OpenFOAM included files
@@ -110,7 +110,7 @@ highlight link	ofDecomposePartDictType Type
 
 	" setFieldsDict
 
-syntax	keyword	ofSetFieldsDictConst volScalarFieldValue box
+syntax	keyword	ofSetFieldsDictConst volScalarFieldValue volVectorFieldValue box
 highlight link	ofSetFieldsDictConst Constant
 
 syntax	keyword ofSetFieldsDictGroup defaultFieldValues fieldValues boxToCell regions boundaryToFace boxToCell boxToFace boxToPoint cellToCell cellToFace cellToPoint cylinderAnnulusToCell  cylinderToCell faceToCell faceToFace  faceToPoint faceZoneToCell  faceZoneToFaceZone fieldToCell labelToCell labelToFace labelToPoint nbrToCell nearestToCell nearestToPoint normalToFace patchToFace pointToCell pointToFace pointToPoint regionToCell regionToFace rotatedBoxToCell setToCellZone setToFaceZone setToPointZone setsToFaceZone shapeToCell sphereToCell surfaceToCell surfaceToPoint targetVolumeToCell zoneToCell zoneToFace zoneToPoint
